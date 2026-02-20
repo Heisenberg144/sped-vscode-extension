@@ -1,0 +1,72 @@
+{
+  "name": "SPED Fiscal Dark",
+  "type": "dark",
+  "colors": {},
+  "tokenColors": [
+    {
+      "scope": "entity.name.section.sped",
+      "settings": {
+        "foreground": "#3B82F6",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "scope": "entity.name.cnpj.sped",
+      "settings": {
+        "foreground": "#22C55E",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "scope": "entity.name.cpf.sped",
+      "settings": {
+        "foreground": "#22C55E",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "scope": "entity.name.chave.sped",
+      "settings": {
+        "foreground": "#F59E0B"
+      }
+    },
+    {
+      "scope": "constant.numeric.date.sped",
+      "settings": {
+        "foreground": "#38BDF8"
+      }
+    },
+    {
+      "scope": "support.type.modelo.sped",
+      "settings": {
+        "foreground": "#A78BFA",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "scope": "support.type.serie.sped",
+      "settings": {
+        "foreground": "#C084FC"
+      }
+    },
+    {
+      "scope": "constant.numeric.numero.sped",
+      "settings": {
+        "foreground": "#FBBF24"
+      }
+    },
+    {
+      "scope": "variable.parameter.icms.base.sped",
+      "settings": {
+        "foreground": "#FB7185"
+      }
+    },
+    {
+      "scope": "variable.parameter.icms.valor.sped",
+      "settings": {
+        "foreground": "#EF4444",
+        "fontStyle": "bold"
+      }
+    }
+  ]
+}

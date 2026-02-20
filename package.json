@@ -1,0 +1,37 @@
+{
+  "name": "sped",
+  "displayName": "SPED Viewer",
+  "description": "Syntax highlighting for SPED ICMS/IPI files focused on fiscal analysis.",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.109.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Themes"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "sped",
+        "aliases": ["SPED", "sped"],
+        "extensions": [".sped"],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "sped",
+        "scopeName": "source.sped",
+        "path": "./syntaxes/sped.tmLanguage.json"
+      }
+    ],
+    "themes": [
+      {
+        "label": "SPED Fiscal Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/sped-color-theme.json"
+      }
+    ]
+  }
+}
