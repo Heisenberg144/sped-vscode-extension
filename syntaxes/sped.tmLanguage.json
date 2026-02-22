@@ -3,6 +3,13 @@
   "name": "SPED Fiscal",
   "scopeName": "source.sped",
   "patterns": [
+
+    {
+      "match": "\\|",
+      "name": "punctuation.separator.pipe.sped"
+    },
+
+
     {
       "match": "^\\|(0000|0150|C100|D700)\\|",
       "name": "entity.name.section.sped"
@@ -49,7 +56,7 @@
     },
 
     {
-      "match": "(?<=\\|C100\\|(?:[^|]*\\|){11})([^|]*)",
+      "match": "(?<=\\|C100\\|(?:[^|]*\\|){21})([^|]*)",
       "name": "variable.parameter.icms.valor.sped"
     },
 
