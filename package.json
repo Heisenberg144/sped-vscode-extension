@@ -1,21 +1,42 @@
 {
-  "name": "sped",
-  "displayName": "SPED Viewer",
-  "description": "Syntax highlighting for SPED ICMS/IPI files focused on fiscal analysis.",
+  "name": "sped-fiscal-tools",
+  "displayName": "SPED Fiscal Tools",
+  "description": "Professional syntax highlighting and visual tools for SPED Fiscal files (.txt). Includes block detection, record highlighting, CNPJ/CPF, ICMS fields and custom dark theme.",
   "version": "0.0.1",
+  "publisher": "adriangcirino",
   "engines": {
-    "vscode": "^1.109.0"
+    "vscode": "^1.80.0"
   },
   "categories": [
     "Programming Languages",
     "Themes"
   ],
+  "keywords": [
+    "sped",
+    "sped fiscal",
+    "contabilidade",
+    "icms",
+    "nfe",
+    "escrituracao",
+    "brasil",
+    "fiscal",
+    "tax",
+    "accounting"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Heisenberg144/sped-vscode-extension"
+  },
+  "bugs": {
+    "url": "https://github.com/Heisenberg144/sped-vscode-extension/issues"
+  },
+  "homepage": "https://github.com/Heisenberg144/sped-vscode-extension#readme",
   "contributes": {
     "languages": [
       {
         "id": "sped",
-        "aliases": ["SPED", "sped"],
-        "extensions": [".sped"],
+        "aliases": ["SPED", "SPED Fiscal"],
+        "extensions": [".txt"],
         "configuration": "./language-configuration.json"
       }
     ],

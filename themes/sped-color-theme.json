@@ -3,70 +3,198 @@
   "type": "dark",
   "colors": {},
   "tokenColors": [
+
+{
+  "scope": [
+    "punctuation.separator.pipe.sped",
+  ],
+  "settings": {
+    "foreground": "#aa17ff",
+    "fontStyle": "bold"
+  }
+},
+    {
+      "scope": "entity.name.block.0.sped",
+      "settings": {
+        "foreground": "#B388FF",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "scope": "entity.name.block.c.sped",
+      "settings": {
+        "foreground": "#40C4FF",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "scope": "entity.name.block.d.sped",
+      "settings": {
+        "foreground": "#69F0AE",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "scope": "entity.name.block.9.sped",
+      "settings": {
+        "foreground": "#FFAB40",
+        "fontStyle": "bold"
+      }
+    },
+
     {
       "scope": "entity.name.section.sped",
       "settings": {
-        "foreground": "#3B82F6",
+        "foreground": "#FF7043",
         "fontStyle": "bold"
+      }
+    },
+    {
+      "scope": "entity.name.record.sped",
+      "settings": {
+        "foreground": "#82B1FF",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "scope": "entity.name.control.sped",
+      "settings": {
+        "foreground": "#FFD740",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "scope": "entity.name.item.sped",
+      "settings": {
+        "foreground": "#90CAF9"
+      }
+    },
+
+    {
+      "scope": "entity.name.chave.sped",
+      "settings": {
+        "foreground": "#FFD54F",
+        "fontStyle": "bold underline"
       }
     },
     {
       "scope": "entity.name.cnpj.sped",
       "settings": {
-        "foreground": "#22C55E",
+        "foreground": "#00E676",
         "fontStyle": "bold"
       }
     },
     {
       "scope": "entity.name.cpf.sped",
       "settings": {
-        "foreground": "#22C55E",
+        "foreground": "#66FFA6"
+      }
+    },
+
+    {
+      "scope": "constant.numeric.date.sped",
+      "settings": {
+        "foreground": "#26C6DA"
+      }
+    },
+    {
+      "scope": "constant.numeric.valuenf55.sped",
+      "settings": {
+        "foreground": "#66FFA6"
+      }
+    },
+    {
+      "scope": "constant.numeric.date.period.sped",
+      "settings": {
+        "foreground": "#2AC3FF",
         "fontStyle": "bold"
       }
     },
     {
-      "scope": "entity.name.chave.sped",
+      "scope": "constant.numeric.date.empty.sped",
       "settings": {
-        "foreground": "#F59E0B"
+        "foreground": "#5C6BC0",
+        "fontStyle": "italic"
       }
     },
-    {
-      "scope": "constant.numeric.date.sped",
-      "settings": {
-        "foreground": "#38BDF8"
-      }
-    },
+
     {
       "scope": "support.type.modelo.sped",
       "settings": {
-        "foreground": "#A78BFA",
+        "foreground": "#FFE082",
         "fontStyle": "bold"
       }
     },
     {
       "scope": "support.type.serie.sped",
       "settings": {
-        "foreground": "#C084FC"
+        "foreground": "#FFD54F",
+        "fontStyle": "bold"
       }
     },
     {
       "scope": "constant.numeric.numero.sped",
       "settings": {
-        "foreground": "#FBBF24"
+        "foreground": "#FFEA00",
+        "fontStyle": "bold"
       }
     },
+
     {
       "scope": "variable.parameter.icms.base.sped",
       "settings": {
-        "foreground": "#FB7185"
+        "foreground": "#F48FB1"
       }
     },
     {
       "scope": "variable.parameter.icms.valor.sped",
       "settings": {
-        "foreground": "#EF4444",
+        "foreground": "#FF4081",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "scope": "constant.numeric.value.sped",
+      "settings": {
+        "foreground": "#00C853"
+      }
+    },
+
+    {
+      "scope": "constant.numeric.cst.sped",
+      "settings": {
+        "foreground": "#FF9100"
+      }
+    },
+    {
+      "scope": "constant.numeric.cfop.sped",
+      "settings": {
+        "foreground": "#FF5252",
+        "fontStyle": "bold"
+      }
+    },
+
+    {
+      "scope": "constant.numeric.cnpj.sped",
+      "settings": {
+        "foreground": "#00FF6A",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "scope": "constant.numeric.ie.sped",
+      "settings": {
+        "foreground": "#00E676"
+      }
+    },
+
+    {
+      "scope": "constant.tipo_perfil.sped",
+      "settings": {
+        "foreground": "#FFEB3B",
         "fontStyle": "bold"
       }
     }
+
   ]
 }

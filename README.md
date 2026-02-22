@@ -1,65 +1,92 @@
-# sped README
+# SPED Fiscal Tools
 
-This is the README for your extension "sped". After writing up a brief description, we recommend including the following sections.
+SPED Fiscal Tools is a Visual Studio Code extension that provides advanced syntax highlighting for SPED Fiscal (EFD ICMS/IPI) files.
 
-## Features
-
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
-
-For example if there is an image subfolder under your extension project workspace:
-
-\!\[feature X\]\(images/feature-x.png\)
-
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
-
-## Requirements
-
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
-
-## Extension Settings
-
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
+Designed specifically for accountants, tax analysts and developers who work daily with SPED files.
 
 ---
 
-## Working with Markdown
+## ✨ Features
 
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
+- Structured highlighting by block:
+  - Bloco 0
+  - Bloco C
+  - Bloco D
+  - Bloco 9
 
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
+- Intelligent color hierarchy:
+  - Blocks with distinct colors
+  - Records highlighted consistently
+  - Control registers (9900, 9990, 9999) emphasized
 
-## For more information
+- Field-level highlighting for:
+  - CNPJ
+  - CPF
+  - IE
+  - Period dates
+  - Document dates
+  - ICMS Base and Value
+  - CFOP
+  - CST
+  - Document keys (44 digits)
 
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
+- Fixed pipe (`|`) coloring for improved visual parsing
 
-**Enjoy!**
+- Works with:
+  - `.txt`
+  - `.docx` (when opened as text)
+
+---
+
+## 🎨 Visual Hierarchy
+
+SPED Fiscal Tools uses a carefully structured color system:
+
+- Pipes always have consistent color
+- Each block has a strong visual identity
+- Financial values stand out
+- Dates are clearly distinguishable
+- Critical control records are emphasized
+
+---
+
+## 🚀 Why SPED Fiscal Tools?
+
+SPED files are large, dense and hard to read.
+
+This extension transforms raw SPED text into a structured, readable, and visually organized document.
+
+Less eye strain.  
+Faster auditing.  
+Better debugging.
+
+---
+
+## 🛠 Installation
+
+1. Open VS Code
+2. Go to Extensions
+3. Search for **SPED Fiscal Tools**
+4. Install
+5. Open your SPED file
+
+---
+
+## 📦 Supported Records
+
+- 0000
+- C100
+- D700
+- D730
+- 9900
+- 9990
+- 9999
+- All block identifiers (0xxx, Cxxx, Dxxx, 9xxx)
+
+---
+
+## 👨‍💻 Author
+
+Developed by Adrian Gabriel Cirino.
+
+---

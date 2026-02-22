@@ -2,67 +2,201 @@
   "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
   "name": "SPED Fiscal",
   "scopeName": "source.sped",
+
   "patterns": [
 
     {
-      "match": "\\|",
-      "name": "punctuation.separator.pipe.sped"
+      "match": "^(\\|)(C\\d{3})(\\|)",
+      "captures": {
+        "1": { "name": "punctuation.separator.pipe.sped" },
+        "2": { "name": "entity.name.block.c.sped" },
+        "3": { "name": "punctuation.separator.pipe.sped" }
+      }
+    },
+    {
+      "match": "^(\\|)(D\\d{3})(\\|)",
+      "captures": {
+        "1": { "name": "punctuation.separator.pipe.sped" },
+        "2": { "name": "entity.name.block.d.sped" },
+        "3": { "name": "punctuation.separator.pipe.sped" }
+      }
+    },
+    {
+      "match": "^(\\|)(9\\d{3})(\\|)",
+      "captures": {
+        "1": { "name": "punctuation.separator.pipe.sped" },
+        "2": { "name": "entity.name.block.9.sped" },
+        "3": { "name": "punctuation.separator.pipe.sped" }
+      }
+    },
+    {
+      "match": "^(\\|)(0\\d{3})(\\|)",
+      "captures": {
+        "1": { "name": "punctuation.separator.pipe.sped" },
+        "2": { "name": "entity.name.block.0.sped" },
+        "3": { "name": "punctuation.separator.pipe.sped" }
+      }
     },
 
-
     {
-      "match": "^\\|(0000|0150|C100|D700)\\|",
-      "name": "entity.name.section.sped"
+      "match": "^(\\|)(9001|9900|9990|9999)(\\|)",
+      "captures": {
+        "1": { "name": "punctuation.separator.pipe.sped" },
+        "2": { "name": "entity.name.control.sped" },
+        "3": { "name": "punctuation.separator.pipe.sped" }
+      }
     },
 
     {
-      "match": "\\|\\d{14}\\|",
-      "name": "entity.name.cnpj.sped"
+      "match": "^(\\|)([0-9]001)(\\|)",
+      "captures": {
+        "1": { "name": "punctuation.separator.pipe.sped" },
+        "2": { "name": "entity.name.section.sped" },
+        "3": { "name": "punctuation.separator.pipe.sped" }
+      }
     },
 
     {
-      "match": "\\|\\d{11}\\|",
-      "name": "entity.name.cpf.sped"
+      "match": "^(\\|)([A-Z0-9]{3,4})(\\|)",
+      "captures": {
+        "1": { "name": "punctuation.separator.pipe.sped" },
+        "2": { "name": "entity.name.record.sped" },
+        "3": { "name": "punctuation.separator.pipe.sped" }
+      }
     },
-
+{
+  "match": "\\|",
+  "name": "punctuation.separator.pipe.sped"
+},
     {
-      "match": "\\|\\d{44}\\|",
+      "match": "(?<=\\|)\\d{44}(?=\\|)",
       "name": "entity.name.chave.sped"
     },
 
     {
-      "match": "\\|\\d{2}/\\d{2}/\\d{4}\\|",
+      "match": "(?<=\\|)\\d{14}(?=\\|)",
+      "name": "entity.name.cnpj.sped"
+    },
+
+    {
+      "match": "(?<=\\|)\\d{11}(?=\\|)",
+      "name": "entity.name.cpf.sped"
+    },
+
+    {
+      "match": "(?<=\\|)\\d{8}(?=\\|)",
       "name": "constant.numeric.date.sped"
     },
 
     {
-      "match": "(?<=\\|C100\\|[^|]*\\|)([^|]*)",
+      "match": "\\|\\|",
+      "name": "constant.numeric.date.empty.sped"
+    },
+
+    {
+      "match": "(?<=\\|C100\\|(?:[^|]*\\|){3})[^|]*",
       "name": "support.type.modelo.sped"
     },
-
     {
-      "match": "(?<=\\|C100\\|[^|]*\\|[^|]*\\|)([^|]*)",
+      "match": "(?<=\\|C100\\|(?:[^|]*\\|){5})[^|]*",
       "name": "support.type.serie.sped"
     },
-
     {
-      "match": "(?<=\\|C100\\|[^|]*\\|[^|]*\\|[^|]*\\|)([^|]*)",
+      "match": "(?<=\\|C100\\|(?:[^|]*\\|){6})[^|]*",
       "name": "constant.numeric.numero.sped"
     },
-
     {
-      "match": "(?<=\\|C100\\|(?:[^|]*\\|){10})([^|]*)",
+      "match": "(?<=\\|C100\\|(?:[^|]*\\|){9})[^|]*",
+      "name": "constant.numeric.date.sped"
+    },
+    {
+      "match": "(?<=\\|C100\\|(?:[^|]*\\|){10})[^|]*",
+      "name": "constant.numeric.valuenf55.sped"
+    },
+    {
+      "match": "(?<=\\|C100\\|(?:[^|]*\\|){20})[^|]*",
       "name": "variable.parameter.icms.base.sped"
     },
-
     {
-      "match": "(?<=\\|C100\\|(?:[^|]*\\|){21})([^|]*)",
+      "match": "(?<=\\|C100\\|(?:[^|]*\\|){21})[^|]*",
       "name": "variable.parameter.icms.valor.sped"
     },
 
     {
-      "match": "(?<=\\|D700\\|[^|]*\\|[^|]*\\|)([^|]*)",
+      "match": "(?<=\\|D700\\|(?:[^|]*\\|){3})[^|]*",
       "name": "support.type.modelo.sped"
+    },
+    {
+      "match": "(?<=\\|D700\\|(?:[^|]*\\|){5})[^|]*",
+      "name": "support.type.serie.sped"
+    },
+    {
+      "match": "(?<=\\|D700\\|(?:[^|]*\\|){6})[^|]*",
+      "name": "constant.numeric.numero.sped"
+    },
+    {
+      "match": "(?<=\\|D700\\|(?:[^|]*\\|){7})[^|]*",
+      "name": "constant.numeric.date.sped"
+    },
+    {
+      "match": "(?<=\\|D700\\|(?:[^|]*\\|){9})[^|]*",
+      "name": "constant.numeric.value.sped"
+    },
+    {
+      "match": "(?<=\\|D700\\|(?:[^|]*\\|){12})[^|]*",
+      "name": "constant.numeric.value.sped"
+    },
+    {
+      "match": "(?<=\\|D700\\|(?:[^|]*\\|){20})[^|]*",
+      "name": "entity.name.chave.sped"
+    },
+
+    {
+      "match": "(?<=\\|D730\\|(?:[^|]*\\|){0})[^|]*",
+      "name": "constant.numeric.cst.sped"
+    },
+    {
+      "match": "(?<=\\|D730\\|(?:[^|]*\\|){1})[^|]*",
+      "name": "constant.numeric.cfop.sped"
+    },
+    {
+      "match": "(?<=\\|D730\\|(?:[^|]*\\|){3})[^|]*",
+      "name": "constant.numeric.value.sped"
+    },
+
+    {
+      "match": "(?<=\\|0000\\|(?:[^|]*\\|){2})[^|]*",
+      "name": "constant.numeric.date.period.sped"
+    },
+    {
+      "match": "(?<=\\|0000\\|(?:[^|]*\\|){3})[^|]*",
+      "name": "constant.numeric.date.period.sped"
+    },
+    {
+      "match": "(?<=\\|0000\\|(?:[^|]*\\|){5})[^|]*",
+      "name": "constant.numeric.cnpj.sped"
+    },
+    {
+      "match": "(?<=\\|0000\\|(?:[^|]*\\|){8})[^|]*",
+      "name": "constant.numeric.ie.sped"
+    },
+    {
+      "match": "(?<=\\|0000\\|(?:[^|]*\\|){12})[^|]*",
+      "name": "constant.tipo_perfil.sped"
+    },
+
+    {
+      "match": "(?<=\\|9900\\|)(C\\d{3}|D\\d{3}|E\\d{3}|G\\d{3}|H\\d{3}|K\\d{3}|0\\d{3}|9\\d{3})",
+      "captures": {
+        "1": {
+          "patterns": [
+            { "match": "C\\d{3}", "name": "entity.name.block.c.sped" },
+            { "match": "D\\d{3}", "name": "entity.name.block.d.sped" },
+            { "match": "0\\d{3}", "name": "entity.name.block.0.sped" },
+            { "match": "9\\d{3}", "name": "entity.name.block.9.sped" }
+          ]
+        }
+      }
     }
   ]
 }
