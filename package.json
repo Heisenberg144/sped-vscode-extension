@@ -1,9 +1,11 @@
 {
   "name": "sped-fiscal-tools",
-  "displayName": "SPED Fiscal Tools",
+  "displayName": "Sped Fiscal Tools",
   "description": "Professional syntax highlighting and visual tools for SPED Fiscal files (.txt). Includes block detection, record highlighting, CNPJ/CPF, ICMS fields and custom dark theme.",
-  "version": "0.0.1",
+  "version": "0.0.5",
   "publisher": "adriangcirino",
+  "license": "LICENSE",
+  "icon": "icon.png",
   "engines": {
     "vscode": "^1.80.0"
   },

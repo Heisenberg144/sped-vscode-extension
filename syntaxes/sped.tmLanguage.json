@@ -2,7 +2,6 @@
   "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
   "name": "SPED Fiscal",
   "scopeName": "source.sped",
-
   "patterns": [
 
     {
@@ -64,139 +63,84 @@
         "3": { "name": "punctuation.separator.pipe.sped" }
       }
     },
-{
-  "match": "\\|",
-  "name": "punctuation.separator.pipe.sped"
-},
-    {
-      "match": "(?<=\\|)\\d{44}(?=\\|)",
-      "name": "entity.name.chave.sped"
-    },
 
-    {
-      "match": "(?<=\\|)\\d{14}(?=\\|)",
-      "name": "entity.name.cnpj.sped"
-    },
+    { "match": "\\|", "name": "punctuation.separator.pipe.sped" },
 
-    {
-      "match": "(?<=\\|)\\d{11}(?=\\|)",
-      "name": "entity.name.cpf.sped"
-    },
+    { "match": "(?<=\\|)\\d{44}(?=\\|)", "name": "entity.name.chave.sped" },
+    { "match": "(?<=\\|)\\d{14}(?=\\|)", "name": "entity.name.cnpj.sped" },
+    { "match": "(?<=\\|)\\d{11}(?=\\|)", "name": "entity.name.cpf.sped" },
+    { "match": "(?<=\\|)\\d{8}(?=\\|)", "name": "constant.numeric.date.sped" },
+    { "match": "\\|\\|", "name": "constant.numeric.date.empty.sped" },
 
-    {
-      "match": "(?<=\\|)\\d{8}(?=\\|)",
-      "name": "constant.numeric.date.sped"
-    },
+    { "match": "(?<=\\|C100\\|(?:[^|]*\\|){3})[^|]*", "name": "support.type.modelo.sped" },
+    { "match": "(?<=\\|C100\\|(?:[^|]*\\|){5})[^|]*", "name": "support.type.serie.sped" },
+    { "match": "(?<=\\|C100\\|(?:[^|]*\\|){6})[^|]*", "name": "constant.numeric.numero.sped" },
+    { "match": "(?<=\\|C100\\|(?:[^|]*\\|){9})[^|]*", "name": "constant.numeric.date.sped" },
+    { "match": "(?<=\\|C100\\|(?:[^|]*\\|){10})[^|]*", "name": "constant.numeric.valuenf55.sped" }, 
+    { "match": "(?<=\\|C100\\|(?:[^|]*\\|){14})[^|]*", "name": "constant.numeric.valuenf55.sped" }, 
 
-    {
-      "match": "\\|\\|",
-      "name": "constant.numeric.date.empty.sped"
-    },
+    { "match": "(?<=\\|D700\\|(?:[^|]*\\|){3})[^|]*", "name": "support.type.modelo.sped" },
+    { "match": "(?<=\\|D700\\|(?:[^|]*\\|){5})[^|]*", "name": "support.type.serie.sped" },
+    { "match": "(?<=\\|D700\\|(?:[^|]*\\|){6})[^|]*", "name": "constant.numeric.numero.sped" },
+    { "match": "(?<=\\|D700\\|(?:[^|]*\\|){7})[^|]*", "name": "constant.numeric.date.sped" },
+    { "match": "(?<=\\|D700\\|(?:[^|]*\\|){9})[^|]*", "name": "constant.numeric.value.sped" },
+    { "match": "(?<=\\|D700\\|(?:[^|]*\\|){12})[^|]*", "name": "tax.icms.base.sped" },
+    { "match": "(?<=\\|D700\\|(?:[^|]*\\|){13})[^|]*", "name": "tax.icms.valor.sped" },
+    { "match": "(?<=\\|D700\\|(?:[^|]*\\|){20})[^|]*", "name": "entity.name.chave.sped" },
 
-    {
-      "match": "(?<=\\|C100\\|(?:[^|]*\\|){3})[^|]*",
-      "name": "support.type.modelo.sped"
-    },
-    {
-      "match": "(?<=\\|C100\\|(?:[^|]*\\|){5})[^|]*",
-      "name": "support.type.serie.sped"
-    },
-    {
-      "match": "(?<=\\|C100\\|(?:[^|]*\\|){6})[^|]*",
-      "name": "constant.numeric.numero.sped"
-    },
-    {
-      "match": "(?<=\\|C100\\|(?:[^|]*\\|){9})[^|]*",
-      "name": "constant.numeric.date.sped"
-    },
-    {
-      "match": "(?<=\\|C100\\|(?:[^|]*\\|){10})[^|]*",
-      "name": "constant.numeric.valuenf55.sped"
-    },
-    {
-      "match": "(?<=\\|C100\\|(?:[^|]*\\|){20})[^|]*",
-      "name": "variable.parameter.icms.base.sped"
-    },
-    {
-      "match": "(?<=\\|C100\\|(?:[^|]*\\|){21})[^|]*",
-      "name": "variable.parameter.icms.valor.sped"
-    },
+    { "match": "(?<=\\|D730\\|(?:[^|]*\\|){0})[^|]*", "name": "constant.numeric.cst.sped" },
+    { "match": "(?<=\\|D730\\|(?:[^|]*\\|){1})[^|]*", "name": "constant.numeric.cfop.sped" },
+    { "match": "(?<=\\|D730\\|(?:[^|]*\\|){3})[^|]*", "name": "constant.numeric.value.sped" },
+    { "match": "(?<=\\|D730\\|(?:[^|]*\\|){4})[^|]*", "name": "tax.icms.base.sped" },
+    { "match": "(?<=\\|D730\\|(?:[^|]*\\|){5})[^|]*", "name": "tax.icms.valor.sped" },
+    { "match": "(?<=\\|D730\\|(?:[^|]*\\|){6})[^|]*", "name": "tax.icmsst730.base.sped" },
+    { "match": "(?<=\\|D730\\|(?:[^|]*\\|){7})[^|]*", "name": "tax.icmsst730.valor.sped" },
 
-    {
-      "match": "(?<=\\|D700\\|(?:[^|]*\\|){3})[^|]*",
-      "name": "support.type.modelo.sped"
-    },
-    {
-      "match": "(?<=\\|D700\\|(?:[^|]*\\|){5})[^|]*",
-      "name": "support.type.serie.sped"
-    },
-    {
-      "match": "(?<=\\|D700\\|(?:[^|]*\\|){6})[^|]*",
-      "name": "constant.numeric.numero.sped"
-    },
-    {
-      "match": "(?<=\\|D700\\|(?:[^|]*\\|){7})[^|]*",
-      "name": "constant.numeric.date.sped"
-    },
-    {
-      "match": "(?<=\\|D700\\|(?:[^|]*\\|){9})[^|]*",
-      "name": "constant.numeric.value.sped"
-    },
-    {
-      "match": "(?<=\\|D700\\|(?:[^|]*\\|){12})[^|]*",
-      "name": "constant.numeric.value.sped"
-    },
-    {
-      "match": "(?<=\\|D700\\|(?:[^|]*\\|){20})[^|]*",
-      "name": "entity.name.chave.sped"
-    },
+    { "match": "(?<=\\|0000\\|(?:[^|]*\\|){2})[^|]*", "name": "constant.numeric.date.period.sped" },
+    { "match": "(?<=\\|0000\\|(?:[^|]*\\|){3})[^|]*", "name": "constant.numeric.date.period.sped" },
+    { "match": "(?<=\\|0000\\|(?:[^|]*\\|){5})[^|]*", "name": "constant.numeric.cnpj.sped" },
+    { "match": "(?<=\\|0000\\|(?:[^|]*\\|){8})[^|]*", "name": "constant.numeric.ie.sped" },
+    { "match": "(?<=\\|0000\\|(?:[^|]*\\|){12})[^|]*", "name": "constant.tipo_perfil.sped" },
 
-    {
-      "match": "(?<=\\|D730\\|(?:[^|]*\\|){0})[^|]*",
-      "name": "constant.numeric.cst.sped"
-    },
-    {
-      "match": "(?<=\\|D730\\|(?:[^|]*\\|){1})[^|]*",
-      "name": "constant.numeric.cfop.sped"
-    },
-    {
-      "match": "(?<=\\|D730\\|(?:[^|]*\\|){3})[^|]*",
-      "name": "constant.numeric.value.sped"
-    },
+    { "match": "(?<=\\|9900\\|)(C\\d{3}|D\\d{3}|E\\d{3}|G\\d{3}|H\\d{3}|K\\d{3}|0\\d{3}|9\\d{3})", "captures": { "1": { "patterns": [ { "match": "C\\d{3}", "name": "entity.name.block.c.sped" }, { "match": "D\\d{3}", "name": "entity.name.block.d.sped" }, { "match": "0\\d{3}", "name": "entity.name.block.0.sped" }, { "match": "9\\d{3}", "name": "entity.name.block.9.sped" } ] } } },
 
-    {
-      "match": "(?<=\\|0000\\|(?:[^|]*\\|){2})[^|]*",
-      "name": "constant.numeric.date.period.sped"
-    },
-    {
-      "match": "(?<=\\|0000\\|(?:[^|]*\\|){3})[^|]*",
-      "name": "constant.numeric.date.period.sped"
-    },
-    {
-      "match": "(?<=\\|0000\\|(?:[^|]*\\|){5})[^|]*",
-      "name": "constant.numeric.cnpj.sped"
-    },
-    {
-      "match": "(?<=\\|0000\\|(?:[^|]*\\|){8})[^|]*",
-      "name": "constant.numeric.ie.sped"
-    },
-    {
-      "match": "(?<=\\|0000\\|(?:[^|]*\\|){12})[^|]*",
-      "name": "constant.tipo_perfil.sped"
-    },
+    { "match": "(?<=\\|C100\\|(?:[^|]*\\|){19})[^|]*", "name": "tax.icms.base.sped" },
+    { "match": "(?<=\\|C100\\|(?:[^|]*\\|){20})[^|]*", "name": "tax.icms.valor.sped" },
+    { "match": "(?<=\\|C100\\|(?:[^|]*\\|){21})[^|]*", "name": "tax.icmsst.base.sped" },
+    { "match": "(?<=\\|C100\\|(?:[^|]*\\|){22})[^|]*", "name": "tax.icmsst.valor.sped" },
+    { "match": "(?<=\\|C100\\|(?:[^|]*\\|){23})[^|]*", "name": "tax.ipi.valor.sped" },
+    { "match": "(?<=\\|C100\\|(?:[^|]*\\|){24})[^|]*", "name": "tax.pis.valor.sped" },
+    { "match": "(?<=\\|C100\\|(?:[^|]*\\|){25})[^|]*", "name": "tax.cofins.valor.sped" },
 
-    {
-      "match": "(?<=\\|9900\\|)(C\\d{3}|D\\d{3}|E\\d{3}|G\\d{3}|H\\d{3}|K\\d{3}|0\\d{3}|9\\d{3})",
-      "captures": {
-        "1": {
-          "patterns": [
-            { "match": "C\\d{3}", "name": "entity.name.block.c.sped" },
-            { "match": "D\\d{3}", "name": "entity.name.block.d.sped" },
-            { "match": "0\\d{3}", "name": "entity.name.block.0.sped" },
-            { "match": "9\\d{3}", "name": "entity.name.block.9.sped" }
-          ]
-        }
-      }
-    }
+
+    { "match": "(?<=\\|C170\\|(?:[^|]*\\|){2})[^|]*", "name": "tax.pis.base.sped"},
+    { "match": "(?<=\\|C170\\|(?:[^|]*\\|){4})[^|]*", "name": "constant.numeric.cfop.sped"},
+    { "match": "(?<=\\|C170\\|(?:[^|]*\\|){11})[^|]*", "name": "tax.icms.base.sped" },
+    { "match": "(?<=\\|C170\\|(?:[^|]*\\|){12})[^|]*", "name": "tax.icms.aliquota.sped" },
+    { "match": "(?<=\\|C170\\|(?:[^|]*\\|){13})[^|]*", "name": "tax.icms.valor.sped" },
+    { "match": "(?<=\\|C170\\|(?:[^|]*\\|){14})[^|]*", "name": "tax.icmsst.base.sped" },
+    { "match": "(?<=\\|C170\\|(?:[^|]*\\|){15})[^|]*", "name": "tax.icmsst.aliquota.sped" },
+    { "match": "(?<=\\|C170\\|(?:[^|]*\\|){16})[^|]*", "name": "tax.icmsst.valor.sped" },
+    { "match": "(?<=\\|C170\\|(?:[^|]*\\|){20})[^|]*", "name": "tax.ipi.base.sped" },
+    { "match": "(?<=\\|C170\\|(?:[^|]*\\|){21})[^|]*", "name": "tax.ipi.aliquota.sped" },
+    { "match": "(?<=\\|C170\\|(?:[^|]*\\|){22})[^|]*", "name": "tax.ipi.valor.sped" },
+
+
+    { "match": "(?<=\\|C190\\|(?:[^|]*\\|){0})[^|]*", "name": "constant.numeric.cst.sped" },
+    { "match": "(?<=\\|C190\\|(?:[^|]*\\|){1})[^|]*", "name": "constant.numeric.cfop.sped" },
+    { "match": "(?<=\\|C190\\|(?:[^|]*\\|){3})[^|]*", "name": "tax.icms.base.sped"},
+    { "match": "(?<=\\|C190\\|(?:[^|]*\\|){4})[^|]*", "name": "tax.icms.aliquota.sped" },
+    { "match": "(?<=\\|C190\\|(?:[^|]*\\|){5})[^|]*", "name": "tax.icms.valor.sped" },
+
+    { "match": "(?<=\\|D700\\|(?:[^|]*\\|){15})[^|]*", "name": "tax.icms.base.sped" },
+    { "match": "(?<=\\|D700\\|(?:[^|]*\\|){16})[^|]*", "name": "tax.icms.valor.sped" },
+    { "match": "(?<=\\|D700\\|(?:[^|]*\\|){17})[^|]*", "name": "tax.icmsst.base.sped" },
+    { "match": "(?<=\\|D700\\|(?:[^|]*\\|){18})[^|]*", "name": "tax.icmsst.valor.sped" },
+    { "match": "(?<=\\|D700\\|(?:[^|]*\\|){19})[^|]*", "name": "tax.pis.valor.sped" },
+    { "match": "(?<=\\|D700\\|(?:[^|]*\\|){20})[^|]*", "name": "tax.cofins.valor.sped" },
+
+    { "match": "(?<=\\|D730\\|(?:[^|]*\\|){2})[^|]*", "name": "tax.icms.base.sped" },
+    { "match": "(?<=\\|D730\\|(?:[^|]*\\|){3})[^|]*", "name": "tax.icms.valor.sped" }
+
   ]
 }
