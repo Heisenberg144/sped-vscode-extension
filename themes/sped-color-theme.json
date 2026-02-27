@@ -140,20 +140,6 @@
       }
     },
 
-    {
-      "scope": "variable.parameter.icms.base.sped",
-      "settings": {
-        "foreground": "#F48FB1"
-      }
-    },
-    {
-      "scope": "variable.parameter.icms.valor.sped",
-      "settings": {
-        "foreground": "#FF4081",
-        "fontStyle": "bold"
-      }
-    },
-    {
       "scope": "constant.numeric.value.sped",
       "settings": {
         "foreground": "#00C853"
