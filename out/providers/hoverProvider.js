@@ -7,6 +7,11 @@ const fieldResolver_1 = require("../core/fieldResolver");
 function registerHoverProvider(context) {
     const provider = vscode.languages.registerHoverProvider('sped', {
         provideHover(document, position) {
+            const enabled = vscode.workspace
+                .getConfiguration()
+                .get('sped.fieldsEnabled');
+            if (!enabled)
+                return;
             const line = document.lineAt(position).text;
             const parsed = (0, parser_1.parseSpedLine)(line, position.character);
             if (!parsed)

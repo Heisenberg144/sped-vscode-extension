@@ -2,15 +2,18 @@
   "name": "sped-fiscal-tools",
   "displayName": "Sped Fiscal Tools",
   "description": "Professional syntax highlighting and visual tools for SPED Fiscal files (.txt). Includes block detection, record highlighting, CNPJ/CPF, ICMS fields and custom dark theme.",
-  "version": "0.0.5",
+  "version": "1.0.0",
   "publisher": "adriangcirino",
   "license": "LICENSE",
   "icon": "icon.png",
   "main": "./out/extension.js",
-"scripts": {
-  "compile": "tsc -p ./"
-},  
-"engines": {
+  "activationEvents": [
+    "onLanguage:sped"
+  ],
+  "scripts": {
+    "compile": "tsc -p ./"
+  },
+  "engines": {
     "vscode": "^1.80.0"
   },
   "categories": [
@@ -29,8 +32,13 @@
     "url": "https://github.com/Heisenberg144/sped-vscode-extension/issues"
   },
   "homepage": "https://github.com/Heisenberg144/sped-vscode-extension#readme",
-
   "contributes": {
+    "commands": [
+    {
+      "command": "sped.toggleFields",
+      "title": "Toggle SPED Field Documentation"
+    }
+  ],
     "configuration": {
       "title": "SPED Fiscal Tools",
       "properties": {
@@ -41,17 +49,22 @@
         }
       }
     },
-
     "languages": [
       {
         "id": "sped",
-        "aliases": ["SPED", "SPED Fiscal"],
-        "extensions": [".txt", ".sped", ".dec"],
+        "aliases": [
+          "SPED",
+          "SPED Fiscal"
+        ],
+        "extensions": [
+          ".txt",
+          ".sped",
+          ".dec"
+        ],
         "firstLine": "^\\|0000\\|",
         "configuration": "./language-configuration.json"
       }
     ],
-
     "grammars": [
       {
         "language": "sped",
@@ -59,7 +72,6 @@
         "path": "./syntaxes/sped.tmLanguage.json"
       }
     ],
-
     "themes": [
       {
         "label": "SPED Fiscal Dark",

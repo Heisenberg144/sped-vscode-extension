@@ -7,9 +7,14 @@ export function registerHoverProvider(context: vscode.ExtensionContext) {
   const provider = vscode.languages.registerHoverProvider('sped', {
 
     provideHover(
+      
       document: vscode.TextDocument,
       position: vscode.Position
     ): vscode.ProviderResult<vscode.Hover> {
+    const enabled = vscode.workspace
+    .getConfiguration()
+    .get<boolean>('sped.fieldsEnabled');
+    if (!enabled) return;
 
       const line = document.lineAt(position).text;
 

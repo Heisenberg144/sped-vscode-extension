@@ -186,12 +186,11 @@ exports.spedDictionary = {
             15: { name: "VL_DA", description: "Valor total de despesas acessórias" },
             16: { name: "VL_BC_ICMS", description: "Base de cálculo do ICMS" },
             17: { name: "VL_ICMS", description: "Valor do ICMS" },
-            18: { name: "VL_BC_ICMS_ST", description: "Base de cálculo do ICMS substituição tributária" },
             19: { name: "VL_ICMS_ST", description: "Valor do ICMS substituição tributária" },
             20: { name: "COD_INF", description: "Código da informação complementar do documento fiscal (campo 02 do registro 0450)" },
-            21: { name: "VL_PIS", description: "Valor do PIS" },
+            18: { name: "VL_PIS", description: "Valor do PIS" },
             22: { name: "VL_COFINS", description: "Valor da COFINS" },
-            23: { name: "CHV_DOCe", description: "Chave do documento eletrônico" }
+            21: { name: "CHV_DOCe", description: "Chave do documento eletrônico" }
         }
     },
     "D730": {
