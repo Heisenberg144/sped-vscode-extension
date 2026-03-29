@@ -1,14 +1,15 @@
 {
   "name": "sped-fiscal-tools",
   "displayName": "Sped Fiscal Tools",
-  "description": "Professional syntax highlighting and visual tools for SPED Fiscal files (.txt). Includes block detection, record highlighting, CNPJ/CPF, ICMS fields and custom dark theme.",
-  "version": "1.0.0",
+  "description": "Professional syntax highlighting and visual tools for SPED Fiscal files (.txt) and fiscal XML documents (NF-e, NFC-e, CT-e, NFS-e). Includes block detection, record highlighting, CNPJ/CPF, tax fields and custom dark themes.",
+  "version": "1.1.0",
   "publisher": "adriangcirino",
   "license": "LICENSE",
   "icon": "icon.png",
   "main": "./out/extension.js",
   "activationEvents": [
-    "onLanguage:sped"
+    "onLanguage:sped",
+    "onLanguage:nfe"
   ],
   "scripts": {
     "compile": "tsc -p ./"
@@ -22,7 +23,20 @@
   ],
   "keywords": [
     "sped",
-    "sped fiscal"
+    "sped fiscal",
+    "nfe",
+    "nf-e",
+    "nfc-e",
+    "cte",
+    "ct-e",
+    "nfse",
+    "nfs-e",
+    "xml fiscal",
+    "danfe",
+    "icms",
+    "ipi",
+    "pis",
+    "cofins"
   ],
   "repository": {
     "type": "git",
@@ -34,11 +48,11 @@
   "homepage": "https://github.com/Heisenberg144/sped-vscode-extension#readme",
   "contributes": {
     "commands": [
-    {
-      "command": "sped.toggleFields",
-      "title": "Toggle SPED Field Documentation"
-    }
-  ],
+      {
+        "command": "sped.toggleFields",
+        "title": "Toggle SPED Field Documentation"
+      }
+    ],
     "configuration": {
       "title": "SPED Fiscal Tools",
       "properties": {
@@ -52,17 +66,17 @@
     "languages": [
       {
         "id": "sped",
-        "aliases": [
-          "SPED",
-          "SPED Fiscal"
-        ],
-        "extensions": [
-          ".txt",
-          ".sped",
-          ".dec"
-        ],
+        "aliases": ["SPED", "SPED Fiscal"],
+        "extensions": [".txt", ".sped", ".dec"],
         "firstLine": "^\\|0000\\|",
         "configuration": "./language-configuration.json"
+      },
+      {
+        "id": "nfe",
+        "aliases": ["NF-e", "NFC-e", "CT-e", "NFS-e", "XML Fiscal"],
+        "extensions": [".xml"],
+        "firstLine": "^<\\?xml",
+        "mimetypes": ["application/xml", "text/xml"]
       }
     ],
     "grammars": [
@@ -70,6 +84,11 @@
         "language": "sped",
         "scopeName": "source.sped",
         "path": "./syntaxes/sped.tmLanguage.json"
+      },
+      {
+        "language": "nfe",
+        "scopeName": "source.nfe",
+        "path": "./syntaxes/nfe.tmLanguage.json"
       }
     ],
     "themes": [
@@ -77,6 +96,11 @@
         "label": "SPED Fiscal Dark",
         "uiTheme": "vs-dark",
         "path": "./themes/sped-color-theme.json"
+      },
+      {
+        "label": "NF-e Fiscal Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/nfe-dark-color-theme.json"
       }
     ]
   }

@@ -1,0 +1,145 @@
+{
+  "name": "NF-e Fiscal Pro",
+  "type": "dark",
+  "colors": {
+    "editor.background": "#0f111a",
+    "editor.foreground": "#d4d4d4",
+    "editor.lineHighlightBackground": "#1a1c25",
+    "editor.selectionBackground": "#264f78"
+  },
+  "tokenColors": [
+    {
+      "name": "Estrutura raiz",
+      "scope": [
+        "entity.name.block.root.nfe",
+        "entity.name.block.inf.nfe",
+        "entity.name.block.total.nfe"
+      ],
+      "settings": {
+        "foreground": "#B388FF",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "name": "Identificação",
+      "scope": [
+        "entity.name.block.ide.nfe",
+        "entity.name.block.emitdest.nfe"
+      ],
+      "settings": {
+        "foreground": "#4FC3F7",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "name": "Produto bloco",
+      "scope": [
+        "entity.name.block.det.nfe",
+        "entity.name.block.prod.nfe"
+      ],
+      "settings": {
+        "foreground": "#FFB74D",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "name": "Campos produto",
+      "scope": [
+        "entity.name.item.nfe"
+      ],
+      "settings": {
+        "foreground": "#FFE0B2"
+      }
+    },
+    {
+      "name": "ICMS bloco",
+      "scope": [
+        "entity.name.block.icms.nfe"
+      ],
+      "settings": {
+        "foreground": "#2979FF",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "name": "ICMS valores",
+      "scope": [
+        "tax.icms.valor.nfe"
+      ],
+      "settings": {
+        "foreground": "#82B1FF",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "name": "IPI",
+      "scope": [
+        "entity.name.block.ipi.nfe",
+        "tax.ipi.valor.nfe"
+      ],
+      "settings": {
+        "foreground": "#BA68C8",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "name": "PIS",
+      "scope": [
+        "entity.name.block.pis.nfe",
+        "tax.pis.valor.nfe"
+      ],
+      "settings": {
+        "foreground": "#00E676",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "name": "COFINS",
+      "scope": [
+        "entity.name.block.cofins.nfe",
+        "tax.cofins.valor.nfe"
+      ],
+      "settings": {
+        "foreground": "#FFEB3B",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "name": "Valor total NF",
+      "scope": [
+        "constant.numeric.value.nfe"
+      ],
+      "settings": {
+        "foreground": "#00FF6A",
+        "fontStyle": "bold underline"
+      }
+    },
+    {
+      "name": "Tags XML",
+      "scope": [
+        "entity.name.tag"
+      ],
+      "settings": {
+        "foreground": "#607D8B"
+      }
+    },
+    {
+      "name": "Atributos",
+      "scope": [
+        "entity.other.attribute-name"
+      ],
+      "settings": {
+        "foreground": "#B0BEC5"
+      }
+    },
+    {
+      "name": "Strings",
+      "scope": [
+        "string.quoted.double"
+      ],
+      "settings": {
+        "foreground": "#90A4AE"
+      }
+    }
+  ]
+}

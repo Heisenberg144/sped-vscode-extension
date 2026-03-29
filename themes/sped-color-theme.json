@@ -1,9 +1,14 @@
 {
   "name": "SPED Fiscal Dark",
   "type": "dark",
-  "colors": {},
+  "colors": {
+    "editor.background": "#0f111a",
+    "editor.foreground": "#d4d4d4",
+    "editorCursor.foreground": "#ffffff",
+    "editor.lineHighlightBackground": "#1a1c25",
+    "editor.selectionBackground": "#264f78"
+  },
   "tokenColors": [
-
     {
       "scope": "punctuation.separator.pipe.sped",
       "settings": {
@@ -11,7 +16,6 @@
         "fontStyle": "bold"
       }
     },
-
     {
       "scope": "entity.name.block.0.sped",
       "settings": {
@@ -40,7 +44,6 @@
         "fontStyle": "bold"
       }
     },
-
     {
       "scope": "entity.name.section.sped",
       "settings": {
@@ -68,7 +71,6 @@
         "foreground": "#90CAF9"
       }
     },
-
     {
       "scope": "entity.name.chave.sped",
       "settings": {
@@ -89,7 +91,6 @@
         "foreground": "#66FFA6"
       }
     },
-
     {
       "scope": "constant.numeric.date.sped",
       "settings": {
@@ -116,7 +117,6 @@
         "fontStyle": "italic"
       }
     },
-
     {
       "scope": "support.type.modelo.sped",
       "settings": {
@@ -138,14 +138,12 @@
         "fontStyle": "bold"
       }
     },
-
     {
       "scope": "constant.numeric.value.sped",
       "settings": {
         "foreground": "#00ff2f"
       }
     },
-
     {
       "scope": "constant.numeric.cst.sped",
       "settings": {
@@ -159,7 +157,6 @@
         "fontStyle": "bold"
       }
     },
-
     {
       "scope": "constant.numeric.cnpj.sped",
       "settings": {
@@ -173,7 +170,6 @@
         "foreground": "#00E676"
       }
     },
-
     {
       "scope": "constant.tipo_perfil.sped",
       "settings": {
@@ -181,7 +177,6 @@
         "fontStyle": "bold"
       }
     },
-
     {
       "scope": "tax.icms.base.sped",
       "settings": {
@@ -201,8 +196,6 @@
         "fontStyle": "bold"
       }
     },
-
-
     {
       "scope": "tax.icmsst.base.sped",
       "settings": {
@@ -222,7 +215,6 @@
         "fontStyle": "bold"
       }
     },
-
     {
       "scope": "tax.icmsst730.base.sped",
       "settings": {
@@ -242,7 +234,6 @@
         "fontStyle": "bold"
       }
     },
-
     {
       "scope": "tax.pis.base.sped",
       "settings": {
@@ -262,8 +253,6 @@
         "fontStyle": "bold"
       }
     },
-
-
     {
       "scope": "tax.cofins.base.sped",
       "settings": {
@@ -283,7 +272,6 @@
         "fontStyle": "bold"
       }
     },
-
     {
       "scope": "tax.ipi.base.sped",
       "settings": {
@@ -303,6 +291,5 @@
         "fontStyle": "bold"
       }
     }
-
   ]
 }

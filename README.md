@@ -1,154 +1,114 @@
-SPED Fiscal Tools is a Visual Studio Code extension that delivers advanced, structured syntax highlighting for SPED Fiscal (EFD ICMS/IPI) files.
+# SPED Fiscal Tools
 
-Built for accountants, tax analysts and developers who work daily with large, dense SPED files and need speed, clarity and precision.
+Extensão para VS Code com highlighting avançado para arquivos SPED Fiscal (EFD ICMS/IPI)
+e XMLs fiscais (NF-e, NFC-e, CT-e, NFS-e).
 
-## 🛠 Installation
-
-1. Open Visual Studio Code
-2. Go to Extensions
-3. Search for **SPED Fiscal Tools**
-4. Click Install
-5. Press `Ctrl + Shift + P`
-6. Search for **Preferences: Color Theme**
-7. Select **SPED Fiscal Dark**
-
-You're ready to go.
+Feita pra quem passa o dia dentro de arquivo SPED e sabe o quanto é difícil ler aquilo sem enlouquecer.
 
 ---
 
-## ✨ What It Does
+## Instalação
 
-SPED files are structured, but visually chaotic.
+1. Abra o VS Code
+2. Vá em **Extensões** (`Ctrl+Shift+X`)
+3. Pesquise por `SPED Fiscal Tools`
+4. Clique em **Instalar**
 
-SPED Fiscal Tools transforms raw text into a visually organized document by applying a carefully designed color hierarchy that mirrors real-world auditing flow.
+Para ativar o tema após instalar:
 
-Instead of reading character by character, you recognize structure instantly.
-
----
-
-## 🎨 Visual Color Legend (SPED Fiscal Dark)
-
-The theme follows a strict cognitive hierarchy — designed for fast auditing and multitasking support environments.
-
-### 🟣 Structure
-
-- **Pipes (`|`)** → Strong purple for vertical visual parsing
-- **Block 0** → Light violet
-- **Block C** → Bright blue
-- **Block D** → Soft green
-- **Block 9** → Orange
-- **Records (C100, D700, etc.)** → Highlighted blue (bold)
-- **Control registers (9900, 9990, 9999)** → Emphasized yellow
+- `Ctrl+Shift+P` → **Preferences: Color Theme** → selecione **SPED Fiscal Dark** ou **NF-e Fiscal Dark**
 
 ---
 
-### 🟡 Document Identification
+## O que a extensão faz
 
-These fields share a unified visual identity for instant recognition:
+### Highlighting para SPED Fiscal (`.txt`, `.sped`, `.dec`)
 
-- Model
-- Series
-- Document Number
-- Access Key (44 digits) → Bold + underline
+Arquivo SPED bruto é uma parede de texto. A extensão aplica uma hierarquia de cores que segue o fluxo real de leitura de um auditor — você para de ler campo por campo e começa a enxergar estrutura.
 
-When you see this color group, you immediately know you're validating the correct document.
+A lógica de cores segue uma ordem cognitiva intencional:
 
----
+**Estrutura e blocos**
 
-### 🟢 Financial Values
+- Pipes `|` → roxo forte — ancora o olho verticalmente
+- Bloco 0 → violeta claro
+- Bloco C → azul
+- Bloco D → verde
+- Bloco 9 → laranja
+- Registros como C100, D700 → azul destacado em negrito
+- Registros de controle (9900, 9990, 9999) → amarelo
 
-- **Total document value (VL_DOC / NF value)** → Bright green
-  - Always dominant
-  - Always easy to spot
+**Identificação do documento**
 
----
+- Modelo, série, número e chave de acesso (44 dígitos) compartilham a mesma família de cor — você reconhece o grupo instantaneamente e sabe que está validando o documento certo.
 
-### 🔴 Fiscal Classification
+**Valores financeiros**
 
-- **CFOP** → Strong red (bold)
-- **CST** → Orange
+- `VL_DOC` e equivalentes → verde neon, sempre dominante
+- Nenhum outro campo sobrepõe o valor total visualmente
 
-Nature of operation stands out immediately.
+**Classificação fiscal**
 
----
+- CFOP → vermelho em negrito
+- CST → laranja
+- A natureza da operação salta antes de qualquer outra coisa
 
-### 🧾 Registration & Identification Fields
+**Cadastro e identificação**
 
-- **CNPJ** → Bright green (bold)
-- **CPF** → Light green
-- **State Registration (IE)** → Green
-- **Profile Type** → Yellow
+- CNPJ → verde forte em negrito
+- CPF → verde claro
+- IE → verde
+- Tipo de perfil → amarelo
 
----
+**Datas**
 
-### 📅 Dates
+- Data do documento → ciano
+- Data do período → azul em negrito
+- Data vazia → índigo em itálico
 
-- **Document dates** → Cyan
-- **Period dates** → Bold blue
-- **Empty date fields** → Italic indigo
+**Impostos — cada tributo tem sua família de cor**
 
-Dates are visually distinct but never overpower financial data.
+| Tributo      | Base             | Alíquota        | Valor                   |
+| ------------ | ---------------- | --------------- | ----------------------- |
+| ICMS         | azul claro       | azul médio      | azul forte (negrito)    |
+| ICMS ST      | azul profundo    | azul mais forte | azul escuro (negrito)   |
+| ICMS ST D730 | ciano específico | ciano           | ciano (negrito)         |
+| PIS          | verde claro      | verde           | verde-azulado (negrito) |
+| COFINS       | lima             | lima neon       | lima (negrito)          |
+| IPI          | roxo suave       | roxo médio      | roxo escuro (negrito)   |
 
----
-
-## 💰 Tax Identity System
-
-Each tax has its own color family.
-
-The rule is simple:
-
-> You identify the tax first, then the field type (base, rate, value).
-
-### 🔵 ICMS
-
-- Base → Light blue
-- Rate → Medium blue
-- Value → Strong blue (bold)
-
-### 🔷 ICMS ST
-
-- Base → Deep blue
-- Rate → Stronger blue
-- Value → Dark blue (bold)
-
-### 🟦 ICMS ST (D730 specific)
-
-- Cyan-toned highlight for differentiation within apuração context
-
-### 🟢 PIS
-
-- Base → Light green
-- Rate → Bright green
-- Value → Teal green (bold)
-
-### 🟡 COFINS
-
-- Base → Lime
-- Rate → Neon lime
-- Value → Lime (bold)
-
-### 🟣 IPI
-
-- Base → Soft purple
-- Rate → Medium purple
-- Value → Deep purple (bold)
-
-All taxes are clearly distinguishable — without overpowering the total document value.
+A regra é simples: você identifica o tributo pelo tom e entende o tipo do campo (base, alíquota ou valor) pela intensidade da cor.
 
 ---
 
-## 🧠 Designed for Real Auditing Flow
+### Highlighting para XML Fiscal (`.xml`)
 
-The visual logic follows how professionals actually read SPED files:
+Suporte a leitura de documentos XML com o tema **NF-e Fiscal Dark**, cobrindo:
 
-1. Identify the record (C100, D700, etc.)
-2. Validate model, series, number and key
-3. Confirm total value
-4. Check CFOP
-5. Analyze taxes
+- **NF-e** — modelo 55
+- **NFC-e** — modelo 65
+- **CT-e** — modelos 57 e 62
+- **NFS-e** — padrão nacional, modelo 13
 
-## The theme supports this exact cognitive order.
+A hierarquia de cores segue a mesma lógica do SPED: valor total da nota em verde dominante, chave de acesso em amarelo com sublinhado, CNPJ/CPF em verde, CFOP em vermelho, impostos em suas respectivas famílias de cor.
 
-## 👨‍💻 Author
+---
 
-Developed by **Adrian Gabriel Cirino**.
+### Hover com documentação de campos
+
+Passe o mouse sobre qualquer campo de um arquivo SPED ou tag de um XML fiscal e veja:
+
+- Nome do campo
+- Descrição do que ele representa
+- Registro ou bloco ao qual pertence
+- Valores possíveis quando aplicável (ex: `tpNF`, `modFrete`, `CRT`, `CST`)
+
+Para desativar: `Ctrl+Shift+P` → **Toggle SPED Field Documentation**
+
+A configuração `sped.fieldsEnabled` também pode ser ajustada diretamente nas settings do VS Code.
+
+---
+
+## Autor
+
+Adrian Gabriel Cirino
