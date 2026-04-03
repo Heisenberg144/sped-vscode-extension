@@ -1,7 +1,6 @@
 # SPED Fiscal Tools
 
-Extensão para VS Code com highlighting avançado para arquivos SPED Fiscal (EFD ICMS/IPI)
-e XMLs fiscais (NF-e, NFC-e, CT-e, NFS-e).
+Extensão de highlighting avançado para arquivos SPED Fiscal (EFD ICMS/IPI).
 
 Feita pra quem passa o dia dentro de arquivo SPED e sabe o quanto é difícil ler aquilo sem enlouquecer.
 
@@ -41,8 +40,7 @@ A lógica de cores segue uma ordem cognitiva intencional:
 **Identificação do documento**
 
 - Modelo, série, número e chave de acesso (44 dígitos) compartilham a mesma família de cor — você reconhece o grupo instantaneamente e sabe que está validando o documento certo.
-
-**Valores financeiros**
+  **Valores financeiros**
 
 - `VL_DOC` e equivalentes → verde neon, sempre dominante
 - Nenhum outro campo sobrepõe o valor total visualmente
@@ -78,19 +76,6 @@ A lógica de cores segue uma ordem cognitiva intencional:
 | IPI          | roxo suave       | roxo médio      | roxo escuro (negrito)   |
 
 A regra é simples: você identifica o tributo pelo tom e entende o tipo do campo (base, alíquota ou valor) pela intensidade da cor.
-
----
-
-### Highlighting para XML Fiscal (`.xml`)
-
-Suporte a leitura de documentos XML com o tema **NF-e Fiscal Dark**, cobrindo:
-
-- **NF-e** — modelo 55
-- **NFC-e** — modelo 65
-- **CT-e** — modelos 57 e 62
-- **NFS-e** — padrão nacional, modelo 13
-
-A hierarquia de cores segue a mesma lógica do SPED: valor total da nota em verde dominante, chave de acesso em amarelo com sublinhado, CNPJ/CPF em verde, CFOP em vermelho, impostos em suas respectivas famílias de cor.
 
 ---
 

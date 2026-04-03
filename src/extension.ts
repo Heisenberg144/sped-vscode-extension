@@ -1,28 +1,60 @@
-// extension.ts  —  adicione as linhas marcadas com [+]
-
 import * as vscode from 'vscode';
 import { registerHoverProvider } from './providers/hoverProvider';
-import { registerNfeHoverProvider } from './providers/nfeHoverProvider'; // [+]
-import { StateManager } from './core/stateManager';
+
+let statusBarItem: vscode.StatusBarItem;
 
 export function activate(context: vscode.ExtensionContext) {
 
-  StateManager.loadState();
+  console.log('SPED Fiscal Tools ativada');
 
-  // Provider SPED (.txt)
+  // Registrar Hover
   registerHoverProvider(context);
 
-  // Provider NF-e / NFC-e / CT-e / NFS-e (.xml)  [+]
-  registerNfeHoverProvider(context);               // [+]
+  // Criar botão da status bar
+  statusBarItem = vscode.window.createStatusBarItem(
+    vscode.StatusBarAlignment.Right,
+    100
+  );
 
-  // Comando toggle (compartilhado entre SPED e NF-e)
-  const toggle = vscode.commands.registerCommand('sped.toggleFields', async () => {
-    await StateManager.toggle();
-    const state = StateManager.isEnabled() ? 'ativada' : 'desativada';
-    vscode.window.showInformationMessage(`Documentação de campos: ${state}`);
-  });
+  statusBarItem.command = 'sped.toggleFields';
+  context.subscriptions.push(statusBarItem);
 
-  context.subscriptions.push(toggle);
+  updateStatusBar();
+  statusBarItem.show();
+
+  // Registrar comando
+  const toggleCommand = vscode.commands.registerCommand(
+    'sped.toggleFields',
+    async () => {
+
+      const config = vscode.workspace.getConfiguration();
+      const current = config.get<boolean>('sped.fieldsEnabled');
+
+      await config.update(
+        'sped.fieldsEnabled',
+        !current,
+        vscode.ConfigurationTarget.Global
+      );
+
+      updateStatusBar();
+    }
+  );
+
+  context.subscriptions.push(toggleCommand);
+}
+
+function updateStatusBar() {
+  const enabled = vscode.workspace
+    .getConfiguration()
+    .get<boolean>('sped.fieldsEnabled');
+
+  if (enabled) {
+    statusBarItem.text = '$(check) SPED Fields: ON';
+    statusBarItem.tooltip = 'Click to disable SPED field documentation';
+  } else {
+    statusBarItem.text = '$(circle-slash) SPED Fields: OFF';
+    statusBarItem.tooltip = 'Click to enable SPED field documentation';
+  }
 }
 
 export function deactivate() {}
